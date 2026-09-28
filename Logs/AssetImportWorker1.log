@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Personal" at "2026-09-26T10:54:00.6075545Z"
 Built from '6000.3/staging' branch; Version is '6000.3.11f1 (3000ef702840) revision 3145967'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 16016 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Personal" at "2026-09-21T09:35:25.3634802Z"
 System  architecture: x64
 Process architecture: x64
-Date: 2026-09-21T09:35:25Z
+Date: 2026-09-26T10:54:00Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.3.11f1\Editor\Unity.exe
@@ -19,7 +19,7 @@ D:/unity/unity projects/puungu
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-58326
+64735
 -licensingIpc
 LicenseClient-Personal
 -job-worker-count
@@ -67,12 +67,14 @@ D:/unity/unity projects/puungu
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
     "memorysetup-temp-allocator-size-cloud-worker=32768"
-Player connection [12260]  Target information:
+Player connection [14496]  Target information:
 
-Player connection [12260]  * "[IP] 192.168.43.159 [Port] 0 [Flags] 2 [Guid] 1603402883 [EditorId] 1603402883 [Version] 1048832 [Id] WindowsEditor(7,EDGAR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [14496]  * "[IP] 10.6.8.45 [Port] 0 [Flags] 2 [Guid] 186963925 [EditorId] 186963925 [Version] 1048832 [Id] WindowsEditor(7,EDGAR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [12260] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [12260] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [14496]  * "[IP] 192.168.137.1 [Port] 0 [Flags] 2 [Guid] 186963925 [EditorId] 186963925 [Version] 1048832 [Id] WindowsEditor(7,EDGAR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [14496] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [14496] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -84,7 +86,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 2.50 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.3.11f1 (3000ef702840)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -100,50 +102,65 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56084
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56832
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.11f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002160 seconds.
-- Loaded All Assemblies, in  0.838 seconds
+Registered in 0.005337 seconds.
+- Loaded All Assemblies, in  0.727 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.0'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Personal"
+[Licensing::IpcConnector] LicenseClient-Personal channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Personal-6000.3.11" at "2026-09-26T10:54:02.2650884Z"
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.0+23225a6
+  Session Id:              4d749b524cb5467b815efb1d01919a9e
+  Correlation Id:          c14f01eb56f06b95ad722ac5cc1fbcfc
+  External correlation Id: 2022760127171864218
+  Machine Id:              Dq+sTHgY3thsuf9cGb9YCd6w1aE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Personal-6000.3.11" (connect: 0.00s, validation: 0.00s, handshake: 0.11s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Personal-6000.3.11-notifications" at "2026-09-26T10:54:02.3754979Z"
+[Licensing::Module] Licensing Background thread has ended after 1.77s
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.777 seconds
-Domain Reload Profiling: 1607ms
-	BeginReloadAssembly (281ms)
+- Finished resetting the current domain, in  0.506 seconds
+Domain Reload Profiling: 1230ms
+	BeginReloadAssembly (251ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (74ms)
-	RebuildNativeTypeToScriptingClass (28ms)
-	initialDomainReloadingComplete (93ms)
-	LoadAllAssembliesAndSetupDomain (354ms)
-		LoadAssemblies (277ms)
+	RebuildCommonClasses (105ms)
+	RebuildNativeTypeToScriptingClass (32ms)
+	initialDomainReloadingComplete (114ms)
+	LoadAllAssembliesAndSetupDomain (221ms)
+		LoadAssemblies (246ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (349ms)
-			TypeCache.Refresh (345ms)
-				TypeCache.ScanAssembly (324ms)
+		AnalyzeDomain (217ms)
+			TypeCache.Refresh (214ms)
+				TypeCache.ScanAssembly (196ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (777ms)
+	FinalizeReload (507ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (703ms)
+		SetupLoadedEditorAssemblies (459ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (120ms)
-			SetLoadedEditorAssemblies (11ms)
-			BeforeProcessingInitializeOnLoad (199ms)
-			ProcessInitializeOnLoadAttributes (227ms)
-			ProcessInitializeOnLoadMethodAttributes (146ms)
+			InitializePlatformSupportModulesInManaged (80ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (107ms)
+			ProcessInitializeOnLoadAttributes (182ms)
+			ProcessInitializeOnLoadMethodAttributes (84ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -152,31 +169,14 @@ Domain Reload Profiling: 1607ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-[Licensing::Module] Licensing is not yet initialized.
-[Licensing::Client] Error: HandshakeResponse reported an error:
-	ResponseCode: 505
-	ResponseStatus: Unsupported protocol version '1.18.0'.
-[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Personal"
-[Licensing::IpcConnector] LicenseClient-Personal channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Personal-6000.3.11" at "2026-09-21T09:36:16.4066221Z"
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.18.0+23225a6
-  Session Id:              73ea320f892a43e692a2b1d02c962400
-  Correlation Id:          b09c76adb83b823c5e2d7e69915a7e91
-  External correlation Id: 1372168983690005191
-  Machine Id:              Dq+sTHgY3thsuf9cGb9YCd6w1aE=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Personal-6000.3.11" (connect: 0.00s, validation: 0.00s, handshake: 0.16s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Personal-6000.3.11-notifications" at "2026-09-21T09:36:16.5712063Z"
-[Licensing::Module] Licensing Background thread has ended after 51.21s
-[Licensing::Module] Licensing is initialized (took 48.40s).
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: 11270623184113-UnityPersXXXX
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-- Loaded All Assemblies, in 49.527 seconds
-Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.828 seconds
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -208,121 +208,112 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.928 seconds
-Domain Reload Profiling: 50450ms
-	BeginReloadAssembly (48748ms)
+- Finished resetting the current domain, in  0.853 seconds
+Domain Reload Profiling: 1678ms
+	BeginReloadAssembly (171ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
+		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (51ms)
-	RebuildCommonClasses (59ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (65ms)
-	LoadAllAssembliesAndSetupDomain (634ms)
-		LoadAssemblies (593ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (573ms)
+		LoadAssemblies (376ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (273ms)
-			TypeCache.Refresh (208ms)
-				TypeCache.ScanAssembly (193ms)
-			BuildScriptInfoCaches (57ms)
+		AnalyzeDomain (289ms)
+			TypeCache.Refresh (221ms)
+				TypeCache.ScanAssembly (206ms)
+			BuildScriptInfoCaches (60ms)
 			ResolveRequiredComponents (5ms)
-	FinalizeReload (929ms)
+	FinalizeReload (853ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (757ms)
+		SetupLoadedEditorAssemblies (674ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (166ms)
-			ProcessInitializeOnLoadAttributes (500ms)
-			ProcessInitializeOnLoadMethodAttributes (74ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (167ms)
+			ProcessInitializeOnLoadAttributes (423ms)
+			ProcessInitializeOnLoadMethodAttributes (66ms)
+			AfterProcessingInitializeOnLoad (11ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.28 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (16ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3894 unused Assets / (1.2 MB). Loaded Objects now: 4496.
-Memory consumption went from 102.9 MB to 101.7 MB.
-Total: 10.915100 ms (FindLiveObjects: 0.662800 ms CreateObjectMapping: 0.295500 ms MarkObjects: 8.333900 ms  DeleteObjects: 1.620500 ms)
+Unloading 3894 unused Assets / (0.7 MB). Loaded Objects now: 4496.
+Memory consumption went from 104.7 MB to 104.0 MB.
+Total: 6.564800 ms (FindLiveObjects: 0.677900 ms CreateObjectMapping: 0.353500 ms MarkObjects: 4.694400 ms  DeleteObjects: 0.837400 ms)
 
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.268 seconds
-Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-EXR error: Failed to parse EXR version info (TinyEXR error code: TINYEXR_ERROR_INVALID_MAGIC_NUMBER)
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.ImageConversion:LoadImage (UnityEngine.Texture2D,System.ReadOnlySpan`1<byte>,bool)
-UnityEngine.ImageConversion:LoadImage (UnityEngine.Texture2D,byte[])
-Unity.PlasticSCM.Editor.UI.Images:GetNewTextureFromBytes (int,int,byte[]) (at ./Library/PackageCache/com.unity.collab-proxy@a5329f833fa8/Editor/UI/Images.cs:665)
-Unity.PlasticSCM.Editor.UI.Images:GetNewTextureFromFile (string) (at ./Library/PackageCache/com.unity.collab-proxy@a5329f833fa8/Editor/UI/Images.cs:676)
-Unity.PlasticSCM.Editor.UI.Images:LoadTextureFromFile (string) (at ./Library/PackageCache/com.unity.collab-proxy@a5329f833fa8/Editor/UI/Images.cs:847)
-Unity.PlasticSCM.Editor.UI.Images:TryLoadImage (string,string,bool) (at ./Library/PackageCache/com.unity.collab-proxy@a5329f833fa8/Editor/UI/Images.cs:824)
-Unity.PlasticSCM.Editor.UI.Images:LoadImage (Unity.PlasticSCM.Editor.UI.Images/Name,bool) (at ./Library/PackageCache/com.unity.collab-proxy@a5329f833fa8/Editor/UI/Images.cs:701)
-Unity.PlasticSCM.Editor.UI.Images:GetImage (Unity.PlasticSCM.Editor.UI.Images/Name) (at ./Library/PackageCache/com.unity.collab-proxy@a5329f833fa8/Editor/UI/Images.cs:86)
-Unity.PlasticSCM.Editor.UI.Images:GetPlasticViewIcon () (at ./Library/PackageCache/com.unity.collab-proxy@a5329f833fa8/Editor/UI/Images.cs:427)
-Unity.PlasticSCM.Editor.Toolbar.UVCSToolbarButtonData:BuildDefault () (at ./Library/PackageCache/com.unity.collab-proxy@a5329f833fa8/Editor/UVCSToolbar/UVCSToolbarButtonData.cs:17)
-Unity.PlasticSCM.Editor.Toolbar.ToolbarController:.ctor (Unity.PlasticSCM.Editor.UVCSPlugin) (at ./Library/PackageCache/com.unity.collab-proxy@a5329f833fa8/Editor/UVCSToolbar/ToolbarController.cs:441)
-Unity.PlasticSCM.Editor.Toolbar.UVCSToolbar:.cctor () (at ./Library/PackageCache/com.unity.collab-proxy@a5329f833fa8/Editor/UVCSToolbar/UVCSToolbar.cs:12)
-Assets.Plugins.PlasticSCM.Editor.Toolbar.UVCSToolbarBoostrap:.cctor () (at ./Library/PackageCache/com.unity.collab-proxy@a5329f833fa8/Editor/UnityInternals/UVCSToolbarBoostrap.cs:15)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+Received Import Request.
+  Time since last request: 193112.049730 seconds.
+  path: Assets/animations/BearAnimator.controller
+  artifactKey: Guid(36b65e06912c32447b608ce9b09b3e59) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/animations/BearAnimator.controller using Guid(36b65e06912c32447b608ce9b09b3e59) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ba36f9325a9936ddf9edf20151a5a7eb') in 0.1327735 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
 
-[./Library/PackageCache/com.unity.collab-proxy@a5329f833fa8/Editor/UI/Images.cs line 665]
+========================================================================
+Received Import Request.
+  Time since last request: 1239.713888 seconds.
+  path: Assets/probs/ancient+wooden+staff+3d+model/tripo_convert_35f64f01-e551-4ace-b481-664c5eea5c8a.fbm/tripo_node_8aa24112-76e1-4f5b-9d0c-e72b24227625_Normal_Bake.png
+  artifactKey: Guid(39895cb50dfebfb4fb86fbfcbef6e52e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/probs/ancient+wooden+staff+3d+model/tripo_convert_35f64f01-e551-4ace-b481-664c5eea5c8a.fbm/tripo_node_8aa24112-76e1-4f5b-9d0c-e72b24227625_Normal_Bake.png using Guid(39895cb50dfebfb4fb86fbfcbef6e52e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd6f072093e914d240a241b3d94b8a249') in 0.1167979 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.079 seconds
-Domain Reload Profiling: 3345ms
-	BeginReloadAssembly (292ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (11ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (58ms)
-	RebuildCommonClasses (118ms)
-	RebuildNativeTypeToScriptingClass (65ms)
-	initialDomainReloadingComplete (148ms)
-	LoadAllAssembliesAndSetupDomain (1643ms)
-		LoadAssemblies (962ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (823ms)
-			TypeCache.Refresh (32ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (758ms)
-			ResolveRequiredComponents (20ms)
-	FinalizeReload (1079ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (871ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (215ms)
-			ProcessInitializeOnLoadAttributes (591ms)
-			ProcessInitializeOnLoadMethodAttributes (45ms)
-			AfterProcessingInitializeOnLoad (8ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3892 unused Assets / (0.9 MB). Loaded Objects now: 4497.
-Memory consumption went from 103.0 MB to 102.1 MB.
-Total: 6.295400 ms (FindLiveObjects: 0.320900 ms CreateObjectMapping: 0.172600 ms MarkObjects: 4.942200 ms  DeleteObjects: 0.858300 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/probs/ancient+wooden+staff+3d+model/tripo_convert_35f64f01-e551-4ace-b481-664c5eea5c8a.fbm/ancient_wooden_staff_3d_model_metallic.PNG
+  artifactKey: Guid(eef0b449a71be754680589a1e280df72) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/probs/ancient+wooden+staff+3d+model/tripo_convert_35f64f01-e551-4ace-b481-664c5eea5c8a.fbm/ancient_wooden_staff_3d_model_metallic.PNG using Guid(eef0b449a71be754680589a1e280df72) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'af6023b4b65aca8a93a3e8b139d3fa77') in 0.0178787 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
-Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/probs/ancient+wooden+staff+3d+model
+  artifactKey: Guid(d35618dd35c6dba4fad53fb4483fee93) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/probs/ancient+wooden+staff+3d+model using Guid(d35618dd35c6dba4fad53fb4483fee93) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '1d3315f067338ad6618de32a59828c19') in 0.0041714 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/probs/ancient+wooden+staff+3d+model/tripo_convert_35f64f01-e551-4ace-b481-664c5eea5c8a.fbm
+  artifactKey: Guid(ac5191a9a3c369342ad55c6f5bfa2d61) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/probs/ancient+wooden+staff+3d+model/tripo_convert_35f64f01-e551-4ace-b481-664c5eea5c8a.fbm using Guid(ac5191a9a3c369342ad55c6f5bfa2d61) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6181b699cce88cc9923cd560bd4b0fc9') in 0.0034935 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/probs/ancient+wooden+staff+3d+model/tripo_convert_35f64f01-e551-4ace-b481-664c5eea5c8a.fbm/tripo_node_8aa24112-76e1-4f5b-9d0c-e72b24227625_BaseColor.png
+  artifactKey: Guid(e951cd0a10b66a047879c1c266905471) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/probs/ancient+wooden+staff+3d+model/tripo_convert_35f64f01-e551-4ace-b481-664c5eea5c8a.fbm/tripo_node_8aa24112-76e1-4f5b-9d0c-e72b24227625_BaseColor.png using Guid(e951cd0a10b66a047879c1c266905471) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2954ac3af48bc168d3e6231d82781db8') in 0.0111835 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/probs/ancient+wooden+staff+3d+model/tripo_convert_35f64f01-e551-4ace-b481-664c5eea5c8a.fbm/ancient_wooden_staff_3d_model_roughness.PNG
+  artifactKey: Guid(8eacc5c291214ea46964446257b0109b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/probs/ancient+wooden+staff+3d+model/tripo_convert_35f64f01-e551-4ace-b481-664c5eea5c8a.fbm/ancient_wooden_staff_3d_model_roughness.PNG using Guid(8eacc5c291214ea46964446257b0109b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e92220deb7d5ff8cc35ae71301598604') in 0.0100734 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/probs
+  artifactKey: Guid(c52412cbbff45264eafb83ee97000998) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/probs using Guid(c52412cbbff45264eafb83ee97000998) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f1d99c89ff47c2dd5d933cb66b4844b2') in 0.0028123 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
